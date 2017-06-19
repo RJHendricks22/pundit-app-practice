@@ -1,0 +1,4 @@
+<h1>Welcome</h1>
+<% @user.as_json.each do |key, value| %>
+  <em>Attr:</em> <%= key %> :  <%= value%><br>
+<% end %>
