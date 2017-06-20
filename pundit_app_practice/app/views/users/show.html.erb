@@ -1,0 +1,4 @@
+<%= render '/devise/menus/login_items' %>
+<% @user.as_json.each do |key, value| %>
+  <em>Attr:</em> <%= key %> :  <%= value%><br>
+<% end %>

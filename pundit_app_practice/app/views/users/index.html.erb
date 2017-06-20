@@ -1,4 +1,7 @@
-<% @user.each do |x| %>
-  <%= x.email %>
-  <%= x.id %>
+<%= render '/devise/menus/login_items' %>
+<% @users.each do |x| %>
+  <h2><a href='/users/<%=x.id%>'><%= x.email %></a></h2>
+  <% x.as_json.each do |key, val| %>
+    <li><em>Attr:</em> <%= key %> <em>Value:</em> <%= val %></li>
+  <% end %><br>
 <% end %>
